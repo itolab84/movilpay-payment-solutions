@@ -1,0 +1,151 @@
+/* Custom styles */
+:root {
+    --primary-color: #10B981;
+    --secondary-color: #1F2937;
+}
+
+/* Base styles */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Hero section */
+.hero-gradient {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+}
+
+/* Service cards */
+.service-card {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* OnePayISP section */
+.onepay-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.onepay-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(45deg, rgba(16, 185, 129, 0.1) 0%, rgba(31, 41, 55, 0.1) 100%);
+    pointer-events: none;
+}
+
+.onepay-image {
+    position: relative;
+}
+
+.onepay-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(31, 41, 55, 0.2) 100%);
+    border-radius: 0.5rem;
+}
+
+/* Glowing effects */
+.glow-effect {
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+}
+
+.glow-text {
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+}
+
+/* Button animations */
+.btn-primary {
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* Feature icons */
+.feature-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0D9488 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.feature-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Partner logos */
+.partner-logo {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.partner-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .onepay-section {
+        text-align: center;
+    }
+    
+    .feature-icon {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0D9488;
+}
